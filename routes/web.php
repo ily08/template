@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\NilaiController;
+use App\Http\Controllers\WaliController;
+use App\Http\Controllers\GuruController;
+// use App\Http\Controllers\PegawaiController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +19,7 @@ use App\Http\Controllers\NilaiController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,10 +37,24 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('siswa', SiswaController::class); 
-Route::resource('nilai', NilaiController::class); 
+Route::resource('akun', SiswaController::class); 
+Route::resource('guru', GuruController::class); 
 Route::resource('jurusan', JurusanController::class); 
-// 
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+    Route::get('/', function () {
+        return view('admin.index');
+    });
+    Route::resource('siswa', SiswaController::class);
+    Route::resource('wali', WaliController::class);
+    Route::resource('guru', GuruController::class);
+//
+}); 
 Route::get('/test-admin', function(){
     return view('layouts.admin');
 });
+
+Route::get('/pegawai', 'PegawaiController@index');
+Route::get('/pegawai/cetak_pdf', 'PegawaiController@cetak_pdf');
+
+// Route::resource('/pegawai', PegawaiController::class);

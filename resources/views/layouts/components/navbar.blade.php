@@ -1,22 +1,19 @@
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<nav class="main-header navbar navbar-expand navbar-success navbar-light">
   <!-- Left navbar links -->
   <ul class="navbar-nav">
     <li class="nav-item">
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="index3.html" class="nav-link">Home</a>
-    </li>
-    <li class="nav-item d-none d-sm-inline-block">
-      <a href="#" class="nav-link">Contact</a>
+      <a href="home" class="nav-link">Dashboard</a>
     </li>
   </ul>
 
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
     <!-- Navbar Search -->
-    <li class="nav-item">
+    {{-- <li class="nav-item">
       <a class="nav-link" data-widget="navbar-search" href="#" role="button">
         <i class="fas fa-search"></i>
       </a>
@@ -35,10 +32,75 @@
           </div>
         </form>
       </div>
-    </li>
+    </li> --}}
+
+    {{-- <div class="nav-item dropdown">
+      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+          <i class="fa fa-envelope me-lg-2"></i>
+          <span class="d-none d-lg-inline-flex">Message</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+          <a href="#" class="dropdown-item">
+              <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                  <div class="ms-2">
+                      <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                      <small>15 minutes ago</small>
+                  </div>
+              </div>
+          </a>
+          <hr class="dropdown-divider">
+          <a href="#" class="dropdown-item">
+              <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                  <div class="ms-2">
+                      <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                      <small>15 minutes ago</small>
+                  </div>
+              </div>
+          </a>
+          <hr class="dropdown-divider">
+          <a href="#" class="dropdown-item">
+              <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                  <div class="ms-2">
+                      <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                      <small>15 minutes ago</small>
+                  </div>
+              </div>
+          </a>
+          <hr class="dropdown-divider">
+          <a href="#" class="dropdown-item text-center">See all message</a>
+      </div>
+  </div> --}}
+
+  {{-- <div class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+        <i class="fa fa-bell me-lg-2"></i>
+        <span class="d-none d-lg-inline-flex">Notification</span>
+    </a>
+    <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+        <a href="#" class="dropdown-item">
+            <h6 class="fw-normal mb-0">Profile updated</h6>
+            <small>15 minutes ago</small>
+        </a>
+        <hr class="dropdown-divider">
+        <a href="#" class="dropdown-item">
+            <h6 class="fw-normal mb-0">New user added</h6>
+            <small>15 minutes ago</small>
+        </a>
+        <hr class="dropdown-divider">
+        <a href="#" class="dropdown-item">
+            <h6 class="fw-normal mb-0">Password changed</h6>
+            <small>15 minutes ago</small>
+        </a>
+        <hr class="dropdown-divider">
+        <a href="#" class="dropdown-item text-center">See all notifications</a>
+    </div>
+</div> --}}
 
     <!-- Messages Dropdown Menu -->
-    <li class="nav-item dropdown">
+    {{-- <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-comments"></i>
         <span class="badge badge-danger navbar-badge">3</span>
@@ -94,9 +156,9 @@
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
       </div>
-    </li>
+    </li> --}}
     <!-- Notifications Dropdown Menu -->
-    <li class="nav-item dropdown">
+    {{-- <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-bell"></i>
         <span class="badge badge-warning navbar-badge">15</span>
@@ -121,17 +183,54 @@
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
       </div>
-    </li>
+    </li> --}}
     <li class="nav-item">
       <a class="nav-link" data-widget="fullscreen" href="#" role="button">
         <i class="fas fa-expand-arrows-alt"></i>
       </a>
     </li>
-    <li class="nav-item">
+    {{-- <li class="nav-item">
       <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
         <i class="fas fa-th-large"></i>
       </a>
-    </li>
-  </ul>
-</nav>
-<!-- /.navbar -->
+    </li> --}}
+    <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+        <i class="fas fa-sign-out-alt"></i>
+        <span class=" navbar-badge"></span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
+       
+        <div class="dropdown-divider"></div>
+        <div class="card">
+          <div class="card-body box-profile">
+            <div class="text-center">
+              <img class="profile-user-img img-fluid img-circle" src="{{asset('assets/dist/img/ptipd.png')}}" alt="User profile picture">
+            </div>
+          
+            <h3 class="profile-username text-center "d-block">{{Auth::user()->name}}</h3>
+
+            <p class="text-muted text-center">Admin</p>
+
+            <ul class="list-group list-group-unbordered mb-3">
+              <li class="list-group-item">
+                {{-- <b>Email</b> <a class="password"d-block">{{Auth::user()->password}}"></a> --}}
+              </li>
+              <li class="list-group-item">
+                {{-- <b>Password</b> <a class="profile-username text-center "d-block">{{Auth::user()->password}}"></a> --}}
+              </li>
+            </ul>
+
+            <a href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}  </a> 
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+          @csrf
+            </form>
+            </li>
+                        
+      </ul>
+      
+    </nav> 
